@@ -14,7 +14,7 @@ class ArticlesController extends Controller
 {
     public function index()
     {
-        $articles = Article::latest('published_at')->get();
+        $articles = Article::latest('published_at')->published()->get();
 
         return view('articles.index', compact('articles'));
     }
@@ -33,10 +33,8 @@ class ArticlesController extends Controller
 
     public function store()
     {
-        $input = Request::all();
-        $input['published_at'] = Carbon::now();
 
-        Article::create($input);
+        Article::create(Request::all());
 
         return redirect('articles');
     }
