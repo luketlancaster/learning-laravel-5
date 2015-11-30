@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 use Carbon\Carbon;
 use App\Article;
@@ -37,9 +36,9 @@ class ArticlesController extends Controller
 
     }
 
-    public function store(Request $request)
+    public function store(CreateArticleRequest $request)
     {
-        $this->validate($request, ['title' => 'required', 'body' => 'required']);
+
         Article::create($request->all());
 
         return redirect('articles');
