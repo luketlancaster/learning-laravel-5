@@ -1,3 +1,10 @@
+# Laravel 5!!
+
+See below for README from Laravel.
+
+I'm following along with this series: ('https://laracasts.com/series/laravel-5-fundamentals')
+
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
